@@ -1,11 +1,12 @@
 <style>
   .widget-container {
     display: flex;
-    justify-content: flex-start; /* Widgets werden direkt nebeneinander platziert */
+    justify-content: flex-start;
+    flex-wrap: wrap; /* Falls der Platz nicht ausreicht, werden die Widgets umgebrochen */
   }
 
   .tradingview-widget-container {
-    margin: 0 5px; /* Minimaler Abstand zwischen den Widgets */
+    margin: 0 2px; /* Minimaler Abstand zwischen den Widgets */
   }
 </style>
 
@@ -26,10 +27,6 @@
     "colorTheme": "light"
     }
     </script>
-    <div class="tradingview-widget-copyright">
-      <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
-      </a>
-    </div>
   </div>
   <!-- TradingView Widget 1 END -->
 
@@ -49,10 +46,25 @@
     "colorTheme": "light"
     }
     </script>
-    <div class="tradingview-widget-copyright">
-      <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
-      </a>
-    </div>
   </div>
   <!-- TradingView Widget 2 END -->
+
+  <!-- TradingView Widget 3 BEGIN -->
+  <div class="tradingview-widget-container">
+    <div id="tradingview_3"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+    {
+    "interval": "1D",
+    "width": "425",
+    "isTransparent": true,
+    "height": "450",
+    "symbol": "AMEX:IWM",
+    "showIntervalTabs": true,
+    "displayMode": "single",
+    "locale": "en",
+    "colorTheme": "light"
+    }
+    </script>
+  </div>
+  <!-- TradingView Widget 3 END -->
 </div>
